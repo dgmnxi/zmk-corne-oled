@@ -8,15 +8,10 @@ manifest:
       url-base: https://github.com/a741725193
     - name: cormoran
       url-base: https://github.com/cormoran
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    # 배터리 기록 모듈 저장소의 원격(Remote) 추가
-    - name: cormoran
-      url-base: https://github.com/cormoran
   projects:
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: v0.3+custom-studio-protocol
       import: app/west.yml
     - name: zmk-nice-oled
       remote: mctechnology17
@@ -39,14 +34,5 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: zmk-v0.3.0.0
-      # 배터리 기록 모듈 프로젝트 등록
-    - name: zmk-module-battery-history
-      remote: cormoran
-      revision: main
-    # 기존 zmk 대신, 커스텀 스튜디오 프로토콜이 포함된 zmk 버전을 사용하도록 설정
-    - name: zmk
-      remote: cormoran
-      revision: v0.3+custom-studio-protocol
-      import: app/west.yml
   self:
     path: config
