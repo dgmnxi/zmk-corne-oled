@@ -11,7 +11,8 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: v0.3+custom-studio-protocol
+      # 이 부분이 핵심입니다! cormoran의 dya 전용 v0.3 브랜치로 수정합니다.
+      revision: v0.3-branch+dya
       import: app/west.yml
     - name: zmk-nice-oled
       remote: mctechnology17
@@ -21,11 +22,9 @@ manifest:
       revision: main
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
-      # 충돌 방지를 위해 배터리 모듈 환경과 완벽히 일치하는 브랜치로 고정합니다.
       revision: main
     - name: zmk-module-ble-management
       remote: cormoran
-      # 기존 zmk-v0.3.0.0 대신 studio 프로토콜 호환 버전으로 명시합니다.
       revision: main
     - name: zmk-module-battery-history
       remote: cormoran
